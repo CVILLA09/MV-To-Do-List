@@ -1,5 +1,4 @@
 <a name="readme-top"></a>
-<br/>
 <div align="center">
   <h1><b>🌟 Welcome to my project! 👋<br/></b></h1>
 
@@ -11,7 +10,7 @@
   <br/>
 <h1 align="center">📅 To-Do-List 📝</h1>
 </div>
-
+<br/>
 
 
 
