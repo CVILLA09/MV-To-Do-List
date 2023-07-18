@@ -1,9 +1,5 @@
 <a name="readme-top"></a>
 
-<div align="center">
-  <img src="" alt="logo" width="140"  height="auto" />
-  <br/>
-
   <h1><b>🌟 Welcome to my project! 👋<br/>📅 To-Do-List 📝</b></h1>
 
 </div>
