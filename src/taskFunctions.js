@@ -20,3 +20,11 @@ export const deleteTask = (tasks, index) => {
     task.index = i + 1;
   });
 };
+
+export const editTask = (tasks, index, newDescription) => {
+  const task = tasks.find((task) => task.index === index);
+
+  if (task) {
+    task.description = newDescription;
+  }
+};
