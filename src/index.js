@@ -2,11 +2,61 @@
 import './style.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 import {
-  addTask, deleteTask, saveTasks, loadTasks,
+  addTask, deleteTask, editTask, saveTasks, loadTasks,
 } from './taskFunctions.js';
 
 // Load tasks from local storage
-const tasks = loadTasks();
+let tasks = loadTasks();
+
+// Function to handle task editing
+const handleEditTask = (event) => {
+  const taskDescription = event.target;
+  const listItem = taskDescription.closest('li');
+  const originalText = taskDescription.textContent;
+
+  // Change the background color to light yellow
+  listItem.style.backgroundColor = 'lightyellow';
+
+  // Make the paragraph editable and focus it
+  taskDescription.contentEditable = 'true';
+  taskDescription.focus();
+
+  // When Enter is pressed, update the task description
+  taskDescription.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault(); // Prevent the creation of a new line
+
+      // Get the new description and the task index
+      const newDescription = taskDescription.textContent;
+      const deleteButton = listItem.querySelector('.delete-button');
+      const index = parseInt(deleteButton.dataset.index, 10);
+
+      // Update the task
+      editTask(tasks, index, newDescription);
+      saveTasks(tasks); // Save tasks to local storage
+
+      // Revert the background color and make the paragraph non-editable
+      listItem.style.backgroundColor = '';
+      taskDescription.contentEditable = 'false';
+    }
+
+    // If the user presses Escape, cancel the edit
+    if (event.key === 'Escape') {
+      taskDescription.textContent = originalText;
+      listItem.style.backgroundColor = '';
+      taskDescription.contentEditable = 'false';
+    }
+  });
+
+  // When clicking anywhere else, cancel the edit
+  document.addEventListener('click', (event) => {
+    if (event.target !== taskDescription) {
+      taskDescription.textContent = originalText;
+      listItem.style.backgroundColor = '';
+      taskDescription.contentEditable = 'false';
+    }
+  }, { once: true });
+};
 
 // Function to print tasks to the DOM
 const printTask = () => {
@@ -21,12 +71,16 @@ const printTask = () => {
     const listItem = document.createElement('li');
     listItem.innerHTML = `
       <input type="checkbox" ${task.completed ? 'checked' : ''}>
-      <p>${task.description}</p>
+      <p class="task-description">${task.description}</p>
       <button class="delete-button" data-index="${task.index}">
         <i class="fas fa-trash"></i>
       </button>
     `;
     tasksContainer.appendChild(listItem);
+
+    // Add an event listener to the task description paragraph
+    const taskDescription = listItem.querySelector('.task-description');
+    taskDescription.addEventListener('click', handleEditTask);
   });
 
   // Add event listeners to the delete buttons
