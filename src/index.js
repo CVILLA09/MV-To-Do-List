@@ -1,7 +1,9 @@
 // Import necessary modules and styles
 import './style.css';
 import '@fortawesome/fontawesome-free/css/all.css';
-import { addTask, deleteTask, saveTasks, loadTasks } from './taskFunctions.js';
+import {
+  addTask, deleteTask, saveTasks, loadTasks,
+} from './taskFunctions.js';
 
 // Load tasks from local storage
 const tasks = loadTasks();

@@ -126,7 +126,7 @@ ul {
   font-style: normal;
   font-weight: 100;
   font-size: 1.5vw;
-  flex-grow: 1; 
+  flex-grow: 1;
   margin-left: 1vw;
 }
 
@@ -139,7 +139,7 @@ ul {
   background-color: transparent;
   font-size: 1.5em;
   color: #c6c6c6;
-  cursor: pointer; 
+  cursor: pointer;
   margin-right: -0.5vw;
 }
 
