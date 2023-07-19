@@ -36,12 +36,16 @@
 - [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
+<br/>
+
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 About the project <a name="about-project"></a>
 
 
 **To-Do List** is a project to showcase daily tasks arrangement with the help of webpack.
+
+<br/>
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -56,7 +60,7 @@
   </ul>
 </details>
 
-
+<br/>
 
 <!-- Features -->
 
