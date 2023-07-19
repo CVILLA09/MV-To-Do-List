@@ -6,7 +6,7 @@ import {
 } from './taskFunctions.js';
 
 // Load tasks from local storage
-let tasks = loadTasks();
+const tasks = loadTasks();
 
 // Function to handle task editing
 const handleEditTask = (event) => {
