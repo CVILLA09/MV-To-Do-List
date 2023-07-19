@@ -74,14 +74,16 @@
 
 To get a local copy up and running, follow these steps:
 <br/>
-### Prerequisites
+
+## Prerequisites
 
 In order to run this project you need the following tools:
 - Node.js installed on your computer
 - An IDE (e.g., Vscode, ...)
 - Terminal
 <br/>
-### Setup
+
+## Setup
 
 Clone this repository to your desired folder by running the following commands in your terminal:
 
@@ -91,7 +93,8 @@ Clone this repository to your desired folder by running the following commands i
   git clone https://github.com/CVILLA09/To-Do-List.git
 ```
 <br/>
-### Install
+
+## Install
 
 Install the necessary dependencies by running the following command:
 
@@ -101,7 +104,8 @@ Install the necessary dependencies by running the following command:
   npm install or npm i
 ```
 <br/>
-### Usage
+
+## Usage
 
 To run the project, execute the following command:
 
@@ -110,7 +114,8 @@ To run the project, execute the following command:
 
 ```
 <br/>
-### Run tests
+
+## Run tests
 
 To run tests, use the following command:
 
@@ -119,7 +124,8 @@ To run tests, use the following command:
 
 ```
 <br/>
-### Additional information
+
+## Additional information
 
 To build the project for production, run:
 
