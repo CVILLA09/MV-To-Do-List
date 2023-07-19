@@ -28,3 +28,17 @@ export const editTask = (tasks, index, newDescription) => {
     task.description = newDescription;
   }
 };
+
+export const saveTasks = (tasks) => {
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+};
+
+export const loadTasks = () => {
+  const tasks = localStorage.getItem('tasks');
+
+  if (tasks) {
+    return JSON.parse(tasks);
+  }
+
+  return [];
+};
