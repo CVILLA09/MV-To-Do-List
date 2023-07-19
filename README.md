@@ -94,6 +94,12 @@ Example commands:
   git clone https://github.com/CVILLA09/To-Do-List.git
 ```
 
+using Ubuntu:
+
+```sh
+  cd my-desired-folder
+  git clone https://github.com/CVILLA09/To-Do-List.git
+```
 
 For more information on how to clone or fork a repository:
 - <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository">How to clone a repo</a>
