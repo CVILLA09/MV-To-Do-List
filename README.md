@@ -74,59 +74,59 @@
 
 To get a local copy up and running, follow these steps:
 
-- Clone this repo as described in the setup section. 
-- Make modifications as peferred 
-
-
 ### Prerequisites
 
-In order to run this project you need: To clone or fork and run it in a browser
-
+In order to run this project you need the following tools:
+- Node.js installed on your computer
+- An IDE (e.g., Vscode, ...)
+- Terminal
 
 ### Setup
 
-Clone this repository to your desired folder:
-
-Example commands:
+Clone this repository to your desired folder by running the following commands in your terminal:
 
 ```sh
-  cd my-folder
+  cd your-preferred-folder-name
+  
   git clone https://github.com/CVILLA09/To-Do-List.git
 ```
-
-using Ubuntu:
-
-```sh
-  cd my-desired-folder
-  git clone https://github.com/CVILLA09/To-Do-List.git
-```
-
-For more information on how to clone or fork a repository:
-- <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository">How to clone a repo</a>
-- <a href="https://docs.github.com/en/get-started/quickstart/fork-a-repo">How to fork a repo</a>
 
 ### Install
 
-There is no installation required.
+Install the necessary dependencies by running the following command:
+
+```sh
+    cd To-Do-List
+
+  npm install or npm i
+```
 
 ### Usage
 
-To run the project, open with **index.html** with any web browser.
-
-For example, for Google Chrome with Ubuntu:
+To run the project, execute the following command:
 
 ```sh
-  cd To-Do-List
-  google-chrome index.html
+    npm start
+
 ```
 
 ### Run tests
 
-There are no test available for this project.
+To run tests, use the following command:
 
+```sh
+      npm run test
 
+```
 
+### Additional information
 
+To build the project for production, run:
+
+```sh
+        npm run build
+
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
