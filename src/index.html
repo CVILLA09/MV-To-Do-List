@@ -4,11 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webpack Exercise</title>
+    <title>To-Do List</title>
 </head>
 
 <body>
-    <h1>Hello webpack!</h1>
+    <main class="todo-container">
+        <header class="todo-header">
+            <h1 class="todo-title">Today's To Do</h1>
+            <button class="refresh-button">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </button>
+        </header>
+        <form id="add-task-form" class="task-input-form">
+            <input type="text" id="task-input" class="task-input" placeholder="Add to your list..." required>
+            <button type="submit" id="task-submit-button" class="task-submit-button fa-solid fa-share">
+            </button>
+        </form>
+        <ul id="tasks-list" class="tasks-list">
+            <!-- Tasks will be added here dynamically -->
+        </ul>
+        <button id="clear-completed-tasks" class="clear-completed-button" type="button">Clear all completed</button>
+    </main>
 </body>
 
 </html>

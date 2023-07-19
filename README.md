@@ -27,6 +27,7 @@
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
+  - [Additional information](#additional-information)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -35,12 +36,16 @@
 - [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
+<br/>
+
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 About the project <a name="about-project"></a>
 
 
 **To-Do List** is a project to showcase daily tasks arrangement with the help of webpack.
+
+<br/>
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -55,7 +60,7 @@
   </ul>
 </details>
 
-
+<br/>
 
 <!-- Features -->
 
@@ -73,54 +78,66 @@
 ## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running, follow these steps:
+<br/>
 
-- Clone this repo as described in the setup section. 
-- Make modifications as peferred 
+## Prerequisites
 
+In order to run this project you need the following tools:
+- Node.js installed on your computer
+- An IDE (e.g., Vscode, ...)
+- Terminal
+<br/>
 
-### Prerequisites
+## Setup
 
-In order to run this project you need: To clone or fork and run it in a browser
-
-
-### Setup
-
-Clone this repository to your desired folder:
-
-Example commands:
+Clone this repository to your desired folder by running the following commands in your terminal:
 
 ```sh
-  cd my-folder
+  cd your-preferred-folder-name
+  
   git clone https://github.com/CVILLA09/To-Do-List.git
 ```
+<br/>
 
+## Install
 
-For more information on how to clone or fork a repository:
-- <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository">How to clone a repo</a>
-- <a href="https://docs.github.com/en/get-started/quickstart/fork-a-repo">How to fork a repo</a>
-
-### Install
-
-There is no installation required.
-
-### Usage
-
-To run the project, open with **index.html** with any web browser.
-
-For example, for Google Chrome with Ubuntu:
+Install the necessary dependencies by running the following command:
 
 ```sh
-  cd To-Do-List
-  google-chrome index.html
+    cd To-Do-List
+
+  npm install or npm i
 ```
+<br/>
 
-### Run tests
+## Usage
 
-There are no test available for this project.
+To run the project, execute the following command:
 
+```sh
+    npm start
 
+```
+<br/>
 
+## Run tests
 
+To run tests, use the following command:
+
+```sh
+      npm run test
+
+```
+<br/>
+
+## Additional information
+
+To build the project for production, run:
+
+```sh
+        npm run build
+
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
