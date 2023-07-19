@@ -1,5 +1,6 @@
 import './style.css';
 import '@fortawesome/fontawesome-free/css/all.css';
+import { addTask } from './taskFunctions.js';
 
 const tasks = [];
 
@@ -20,3 +21,6 @@ const printTask = () => {
 };
 
 window.addEventListener('load', printTask);
+
+// Add a new task
+addTask(tasks, 'New Task');
