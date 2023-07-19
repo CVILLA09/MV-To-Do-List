@@ -152,7 +152,7 @@ To build the project for production, run:
 
 - GitHub: [@CVILLA09](https://github.com/CVILLA09)
 
-- LinkedIn: [@Cristian Villa](www.linkedin.com/in/cristian-villa-5b518127b)
+- LinkedIn: [@CristianVilla](www.linkedin.com/in/cristian-villa-5b518127b)
 
 
 

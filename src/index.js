@@ -1,23 +1,7 @@
 import './style.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 
-const tasks = [
-  {
-    description: 'Task 1',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'Task 2',
-    completed: false,
-    index: 2,
-  },
-  {
-    description: 'Task 3',
-    completed: false,
-    index: 3,
-  },
-];
+const tasks = [];
 
 const printTask = () => {
   const tasksContainer = document.getElementById('tasks-list');
