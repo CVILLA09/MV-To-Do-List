@@ -4,9 +4,10 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import {
   addTask, deleteTask, editTask, saveTasks, loadTasks,
 } from './taskFunctions.js';
+import { clearCompleted, updateStatus } from './statusUpdates.js';
 
 // Load tasks from local storage
-const tasks = loadTasks();
+let tasks = loadTasks();
 
 // Function to handle task editing
 const handleEditTask = (event) => {
@@ -78,6 +79,19 @@ const printTask = () => {
     `;
     tasksContainer.appendChild(listItem);
 
+    // Add an event listener to the checkbox
+    const checkbox = listItem.querySelector('input[type="checkbox"]');
+    checkbox.addEventListener('change', () => {
+      // Get the new status and the task index
+      const status = checkbox.checked;
+      const deleteButton = listItem.querySelector('.delete-button');
+      const index = parseInt(deleteButton.dataset.index, 10);
+
+      // Update the task status
+      updateStatus(tasks, index, status);
+      saveTasks(tasks); // Save tasks to local storage
+    });
+
     // Add an event listener to the task description paragraph
     const taskDescription = listItem.querySelector('.task-description');
     taskDescription.addEventListener('click', handleEditTask);
@@ -112,5 +126,13 @@ taskSubmitButton.addEventListener('click', (event) => {
   addTask(tasks, taskInput.value); // Add the new task
   saveTasks(tasks); // Save tasks to local storage
   taskInput.value = ''; // Clear the input field
+  printTask(); // Update the tasks list
+});
+
+// When the "Clear all completed" button is clicked, clear all completed tasks
+const clearCompletedButton = document.getElementById('clear-completed-tasks');
+clearCompletedButton.addEventListener('click', () => {
+  tasks = clearCompleted(tasks);
+  saveTasks(tasks); // Save tasks to local storage
   printTask(); // Update the tasks list
 });
