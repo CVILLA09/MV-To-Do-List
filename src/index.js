@@ -4,10 +4,10 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import {
   addTask, deleteTask, editTask, saveTasks, loadTasks,
 } from './taskFunctions.js';
-import * as statusUpdates from './statusUpdates.js';
+import { clearCompleted, updateStatus } from './statusUpdates.js';
 
 // Load tasks from local storage
-const tasks = loadTasks();
+let tasks = loadTasks();
 
 // Function to handle task editing
 const handleEditTask = (event) => {
@@ -88,7 +88,7 @@ const printTask = () => {
       const index = parseInt(deleteButton.dataset.index, 10);
 
       // Update the task status
-      statusUpdates.updateStatus(tasks, index, status);
+      updateStatus(tasks, index, status);
       saveTasks(tasks); // Save tasks to local storage
     });
 
@@ -126,5 +126,13 @@ taskSubmitButton.addEventListener('click', (event) => {
   addTask(tasks, taskInput.value); // Add the new task
   saveTasks(tasks); // Save tasks to local storage
   taskInput.value = ''; // Clear the input field
+  printTask(); // Update the tasks list
+});
+
+// When the "Clear all completed" button is clicked, clear all completed tasks
+const clearCompletedButton = document.getElementById('clear-completed-tasks');
+clearCompletedButton.addEventListener('click', () => {
+  tasks = clearCompleted(tasks);
+  saveTasks(tasks); // Save tasks to local storage
   printTask(); // Update the tasks list
 });

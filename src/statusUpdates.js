@@ -7,3 +7,5 @@ export const updateStatus = (tasks, index, status) => {
     task.completed = status;
   }
 };
+
+export const clearCompleted = (tasks) => tasks.filter((task) => !task.completed);
