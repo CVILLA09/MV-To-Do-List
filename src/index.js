@@ -4,6 +4,7 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import {
   addTask, deleteTask, editTask, saveTasks, loadTasks,
 } from './taskFunctions.js';
+import * as statusUpdates from './statusUpdates.js';
 
 // Load tasks from local storage
 const tasks = loadTasks();
@@ -77,6 +78,19 @@ const printTask = () => {
       </button>
     `;
     tasksContainer.appendChild(listItem);
+
+    // Add an event listener to the checkbox
+    const checkbox = listItem.querySelector('input[type="checkbox"]');
+    checkbox.addEventListener('change', () => {
+      // Get the new status and the task index
+      const status = checkbox.checked;
+      const deleteButton = listItem.querySelector('.delete-button');
+      const index = parseInt(deleteButton.dataset.index, 10);
+
+      // Update the task status
+      statusUpdates.updateStatus(tasks, index, status);
+      saveTasks(tasks); // Save tasks to local storage
+    });
 
     // Add an event listener to the task description paragraph
     const taskDescription = listItem.querySelector('.task-description');
