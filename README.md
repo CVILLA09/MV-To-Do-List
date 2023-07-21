@@ -17,6 +17,7 @@
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
+  - [🚀 Live Version](#live-version)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
@@ -43,6 +44,12 @@
 
 
 **To-Do List** is a project to showcase daily tasks arrangement with the help of webpack.
+
+<br/>
+
+## 🚀 Live Version <a name="live-version"></a>
+
+Check out the live version of the To Do list application [here](https://<CVILLA09.github.io/<To-Do-List>/dist/).
 
 <br/>
 
