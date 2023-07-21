@@ -49,7 +49,7 @@
 
 ## 🚀 Live Version <a name="live-version"></a>
 
-Check out the live version of the To Do list application [here](https://<CVILLA09.github.io/<To-Do-List>/dist/).
+Check out the live version of the To Do list application [here](https://<cvilla09.github.io/<To-Do-List>/dist/).
 
 <br/>
 
