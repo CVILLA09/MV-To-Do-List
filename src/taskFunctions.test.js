@@ -1,4 +1,6 @@
-import { addTask, deleteTask, saveTasks, editTask } from './taskFunctions.js';
+import {
+  addTask, deleteTask, saveTasks, editTask,
+} from './taskFunctions.js';
 
 describe('addTask', () => {
   test('adds a new task to the tasks array', () => {
@@ -41,12 +43,11 @@ describe('saveTasks', () => {
 
 describe('editTask', () => {
   test('Edit a task\'s description', () => {
-
-    const tasks=[ 
-      {description: "Task 1", completed:false , index:1},
-      {description: "Task 2", completed:false, index:2}
+    const tasks = [
+      { description: 'Task 1', completed: false, index: 1 },
+      { description: 'Task 2', completed: false, index: 2 },
     ];
     editTask(tasks, 1, 'new description');
-expect(tasks[0].description).toBe('new description');
+    expect(tasks[0].description).toBe('new description');
   });
 });
