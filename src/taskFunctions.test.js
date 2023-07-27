@@ -1,4 +1,5 @@
-import { addTask, deleteTask } from './taskFunctions';
+import { addTask, deleteTask } from './taskFunctions.js';
+
 describe('addTask', () => {
   test('adds a new task to the tasks array', () => {
     const tasks = [];

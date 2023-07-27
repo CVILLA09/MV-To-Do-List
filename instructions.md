@@ -121,5 +121,3 @@ expect(document.body.textContent).toBe('Hello, world!');
 ```
 
 5. Run your tests again with `npm test`. You should see a coverage report in your terminal.
-
-Remember to write tests for all edge cases and possible inputs, not just the "happy path". This will help ensure your functions are robust and handle all possible scenarios. Good luck!
